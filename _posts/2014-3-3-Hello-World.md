@@ -3,11 +3,10 @@ layout: post
 title: Use Dockerfile with Private Dependencies in Rust
 published: true
 ---
-# Using Docker to Build Rust Project with Publish and Private Dependencies (Git)
 
 Rust is an awesome programming language. It has more selling points such as Fast, Concurrent, and Safe (Memory safe, concurrent safe, ...). But, as a young language, it also has some downsides; one of them is compiling time. The contributors of compiling time are Updating Index, Downloading, Checking, Optimizing, etc. Nowadays, almost companies want to add, test, and deploy with small lifecycle feature/fix development. This post will be focusing on improving the build flow of rust project by using Dockerfile, private dependencies, and multi-stage of Docker build.
 
-# Private github repo and how to use it while docker build
+## Private github repo and how to use it while docker build
 
 First, we will come to a simple example. The project contains one private lib, it's stored by Github. In Rust project, you can use git source as a dependency; You can read at [here](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#specifying-dependencies-from-git-repositories). Git location in Cargo.toml is using the `master` branch as the default branch. You can specify your code by: `revision (commit)`, `tag`, or `branch`. Examples:
 
@@ -56,7 +55,7 @@ You will receive output like this:
 
 ```
 
-# Caching your build
+## Caching your build
 
 According to the notice in the introduction, Rust has a downside. That is compiling time. Rust is very slow in the first time builder because of the tradeoff performance, safety between compiling time and running time. Rust needs to check ownership, check safety rules, optimize performance, update index of crates, download dependencies, build your source code. That's. When you use Docker to build Rust, If you don't do anything, you just copy source code and build, you could face the problem that all building steps will re-run. Each build will waste your time up to 30 minutes. It's so expensive in development time.
 
@@ -124,7 +123,7 @@ docker build --ssh default . -t rust-base:1.42
 
 ```
 
-# Takeaways:
+## Summary:
 
 - Use Docker build kit and ssh-agent to use private dependency in Cargo.
 - Use the default mechanism of Cargo.
