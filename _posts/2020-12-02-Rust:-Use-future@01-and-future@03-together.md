@@ -49,7 +49,7 @@ Yeh. Async Await syntax. Readable code. All problems solved? No. The problem is 
 - The interface is changed. We cannot use two libs based on two different Future Traits. If you update a library, you need to check the Future trait of it.
 - One selling point of Rust is Fearless Concurrent which means concurrent programming with Rust is easy. But, a new guy who comes to this young language will confuse and PANIC while coding and implement Rust dependencies to their Rust project.
 
-Don't worry, the future-rs team provides a way to use 2 future traits together in the same project. It means you can use a lot of user interfaces of futures@0.3 in the project base on futures@0.1 runtime. For easy example:
+Don't worry, the future-rs team provides a way to use 2 future traits together in the same project. It means you can use a lot of useful interfaces of futures@0.3 in the project base on futures@0.1 runtime. For easy example:
 
 ```rust
 let future03 = async {
@@ -166,4 +166,3 @@ Thank to @future-rs team and:
 - **[@Nemo157](https://www.github.com/Nemo157)**
 - **[@cramertj](https://www.github.com/cramertj)**
 - **[@LucioFranco](https://www.github.com/LucioFranco)**
-
