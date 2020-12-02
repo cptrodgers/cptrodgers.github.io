@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 # Rust: Use futures@0.1 and futures@0.3 together
 
