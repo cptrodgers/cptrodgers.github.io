@@ -2,12 +2,15 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
-I'm just a software engineer in the world. Want to build somethings.
+The blog (or my note) includes some ideas, tips, perspectives in software development. I'm working on an company that is using Rust as production languages - [Axie Infinity](https://axieinfinity.com/) - and I also love Rust. So, almost posts in this blog will address from perspective of a Rust Programmer.
 
-The blog is a personal idea with 2 reasons.
-+ First, I want to improve my writing skill.
-+ Second, I want to share my knowledge in Software Development.
+## More Informations:
+Hien Nguyen
++ [Github](github.com/cptrodgers)
++ [Linkedin](https://linkedin.com/in/cptrodgers)
++ cptrodgers@gmail.com
 
-I hope you enjoy while reading. Thanks all.
+If you a guy who want work in a Company that is using Rust as a primary langauge in Vietnam. Contact us: [Skymavis](https://skymavis.com/) or [Axie](https://axieinfinity.com/)
