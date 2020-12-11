@@ -175,9 +175,9 @@ impl Handler<GetOne> for GetActor {
 
 ### Wait and Spawn
 
-In async context (async actor), actix provide two efficient way to handle non-return message that spawns another thread to handle this task. It's similar to another concurrent library, spawn and wait. In the context of Actor, It's relating to process messages instead of thread.
+In async context (async actor), actix provide two efficient way to handle non-return message that spawns a future to handle this task. It's similar to another concurrent library, spawn and wait. In the context of Actor, It's relating to process messages instead of thread.
 
-- Spawn will spawn a new thread to handle the current task and don't stop the process of the new message. This is efficient in case you don't care about ordering messages.
+- Spawn will spawn a new future to handle the current task and don't stop the process of the new message. This is efficient in case you don't care about ordering messages.
 
 ```rust
 use actix::prelude::*;
@@ -202,18 +202,19 @@ impl Handler<PrintOne> for PrintActor {
 
     fn handle(&mut self, _: PrintOne, ctx: &mut Self::Context) -> Self::Result {
         let task = async {
-						sleep(Duration::from_millis(500)).await;
+			sleep(Duration::from_millis(500)).await;
             print_one().await;
         };
 				
-				// Actix will spawn and continue processing new message although
-				// we want to sleep in 0.5s
+		// Actix will spawn a future to handle
+        // and continue processing new message although
+		// we want to sleep in 0.5s
         wrap_future::<_, Self>(task).spawn(ctx);
     }
 }
 ```
 
-- Waiting is another level of spawn. It will spawn a new thread to handle the current task and stop the process of new incoming messages until this task complete. This is useful in case you have an important task that needs to complete before processing another message. For example: Check authentication.
+- Waiting is another level of spawn. It will spawn a new future to handle the current task and stop the process of new incoming messages until this task complete. This is useful in case you have an important task that needs to complete before processing another message. For example: Check authentication.
 
 ```rust
 use actix::prelude::*;
@@ -238,13 +239,13 @@ impl Handler<PrintOne> for PrintActor {
 
     fn handle(&mut self, _: PrintOne, ctx: &mut Self::Context) -> Self::Result {
         let task = async {
-						sleep(Duration::from_millis(500)).await;
+			sleep(Duration::from_millis(500)).await;
             print_one().await;
         };
 
-				// Actix will spawn new thread and wait for complete this task
-				// It means incoming message should wait at least 0.5s
-				// for complete this task
+		// Actix will spawn new future and wait for complete this task
+		// It means incoming message should wait at least 0.5s
+		// for complete this task
         wrap_future::<_, Self>(task).wait(ctx);
     }
 }
