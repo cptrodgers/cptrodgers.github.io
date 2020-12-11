@@ -4,9 +4,17 @@ published: true
 
 Actix is an Actor framework for Rust (According to the actix github page). Actor is a high level of concurrency model. The tips below that are useful for newbies who want to boost their performance in Actix.
 
++ Websocket with Actor
++ Async Actor and Sync Actor
++ Handle Async Function
++ System Service and Arbiter Service
++ Alternative System Service but in Arbiter Thread (Non-Block System)
++ Interval Task
+
+
 # Tips:
 
-### Actor with Websocket
+### Websocket with Actor.
 
 Actix works well with Websocket protocol. Each WebSocket is an actor with the potential to handle a Stream. This is the sample code to handle Websocket in Actix.
 
@@ -368,4 +376,3 @@ impl Actor for Connection {
 }
 
 ```
-
