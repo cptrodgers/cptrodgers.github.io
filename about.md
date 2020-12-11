@@ -9,7 +9,7 @@ The blog (or my note) includes some ideas, tips, perspectives in software develo
 
 ## More Informations:
 Hien Nguyen
-+ [Github](github.com/cptrodgers)
++ [Github](https://github.com/cptrodgers)
 + [Linkedin](https://linkedin.com/in/cptrodgers)
 + cptrodgers@gmail.com
 
