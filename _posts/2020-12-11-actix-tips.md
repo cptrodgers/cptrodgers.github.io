@@ -349,6 +349,7 @@ let db_address = DBPool::get_address()
 Sometimes, you want to loop interval in a period to do something. Actix also provides a good interface to make it work. For example, Check collection is live.
 
 ```rust
+
 impl Actor for Connection {
     type Context = ws::WebsocketContext<Self>;
 
