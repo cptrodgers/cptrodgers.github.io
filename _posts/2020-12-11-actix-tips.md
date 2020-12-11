@@ -354,7 +354,7 @@ impl Actor for Connection {
     type Context = ws::WebsocketContext<Self>;
 
     fn started(&mut self, ctx: &mut Self::Context) {
-				// This task run after 15s.
+		// This task run after 15s.
         ctx.run_interval(Duration::from_secs(15), |act, ctx| {
             if Instant::now().duration_since(act.heartbeat) > CLIENT_TIMEOUT {         
                 // Disconnected, Stop this Actor
@@ -367,6 +367,5 @@ impl Actor for Connection {
     }
 }
 
-```## A New Post
+```
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
