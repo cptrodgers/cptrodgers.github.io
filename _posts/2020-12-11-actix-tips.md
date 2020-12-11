@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 Actix is an Actor framework for Rust (According to the actix github page). Actor is a high level of concurrency model. The tips below that are useful for newbies who want to boost their performance in Actix.
