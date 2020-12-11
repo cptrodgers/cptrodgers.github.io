@@ -18,7 +18,7 @@ avatar: https://avatars0.githubusercontent.com/u/16829904?s=460&u=988b3d0024c6e3
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: cptrodgers@gmail.com
+  email:
   facebook:
   flickr:
   github: cptrodgers
@@ -26,7 +26,7 @@ footer-links:
   linkedin: cptrodgers
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: cptrodgers
+  twitter:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
