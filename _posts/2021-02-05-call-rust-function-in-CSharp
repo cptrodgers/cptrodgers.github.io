@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 This is a note for someone who is finding a way that writes main logic by Rust and using in C# (or other language). Thanks for great post by Test Double ([https://blog.testdouble.com/posts/2018-01-02-unity-rust-ffi-getting-started](https://blog.testdouble.com/posts/2018-01-02-unity-rust-ffi-getting-started))
 
