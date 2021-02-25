@@ -1,8 +1,7 @@
 ---
 published: true
 ---
-This is a note for someone who is finding a way that writes main logic by Rust and using in C# (or other language). Thanks for great post by Test Double ([https://blog.testdouble.com/posts/2018-01-02-unity-rust-ffi-getting-started](https://blog.testdouble.com/posts/2018-01-02-unity-rust-ffi-getting-started))
-
+This is a note for someone who is finding a way that writes main logic by Rust and using in C# (or other language).
 # Why we need communicate with other language?
 
 It's easy to become an over-engineer decision when you want to write some logic in a programming language and execute it in another programming language. You need to think carefully about this decision. It's useful when:
@@ -179,6 +178,9 @@ FFI (Foreign Function Interface) is the way that extern the function interface t
     	}
     }
     ```
+ 
+Thanks for great post by Test Double ([https://blog.testdouble.com/posts/2018-01-02-unity-rust-ffi-getting-started](https://blog.testdouble.com/posts/2018-01-02-unity-rust-ffi-getting-started))
+
 
 # Github example
 
