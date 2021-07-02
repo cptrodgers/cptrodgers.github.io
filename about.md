@@ -6,7 +6,9 @@ published: true
 ---
 
 I'm experienced SWE and a rustacean.
+
 Previously, I worked for [@axieinfinity](https://twitter.com/AxieInfinity)
+
 Currently, I'm working for a Care Health company.
 
 + [Github](https://github.com/cptrodgers)
